@@ -20,7 +20,9 @@
 
 //for (int i = 1; i < word.Length + 1; i++)
 //{
-//    Console.Write(word[^i]);
+//    //Console.Write(word[^i]);
+//    var rev = word[^i];
+//    Console.Write(rev);
 //}
 #endregion
 //Verilmis arrayde ededlerin ededi ortasini tapin.
@@ -35,3 +37,79 @@
 
 //Console.WriteLine($"Output: {avg}");
 #endregion
+
+//Arrayin sorting ve searching
+#region Bubble Sort
+int[] numArr = new int[] { 19, 16, 15, 6, 8, 9, 12, 21, 24 };
+int temp;
+
+for (int i = 0; i < numArr.Length; i++)
+{
+    for (int j = 0; j < numArr.Length - 1; j++)
+    {
+        if (numArr[j] > numArr[j + 1])
+        {
+            temp = numArr[j + 1];
+            numArr[j + 1] = numArr[j];
+            numArr[j] = temp;
+        }
+    }
+}
+for (int i = 0; i < numArr.Length; i++)
+{
+    Console.WriteLine(numArr[i]);
+}
+#endregion
+
+#region linear Search
+//int number = 15;
+//for (int i = 0; i < numArr.Length; i++)
+//{
+//    if (number == numArr[i])
+//    {
+//        Console.WriteLine($"element arrayde {i}ci indexde yerlesir");
+
+//    }
+//    else
+//    {
+//        Console.WriteLine("eded tapilmadi");
+//    }
+//}
+#endregion
+
+#region Binary Search
+//int number = 121;
+//int min = 0;
+//int max = numArr.Length - 1;
+
+//while (min < max)
+//{
+//    int midPoint = (max + min) / 2;
+
+//    if (numArr[midPoint] == number)
+//    {
+//        Console.WriteLine("verilmis eded tapildi");
+//        break;
+//    }
+//    else if (numArr[midPoint] < number)
+//    {
+//        min = midPoint + 1;
+//    }
+//    else if (numArr[midPoint] > number)
+//    {
+//        max = midPoint - 1;
+//    }
+//}
+Console.WriteLine("verilmis eded tapilmadi");
+#endregion 
+
+
+
+
+
+
+
+
+
+
+
