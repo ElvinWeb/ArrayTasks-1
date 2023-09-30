@@ -40,25 +40,25 @@
 
 //Arrayin sorting ve searching
 #region Bubble Sort
-int[] numArr = new int[] { 19, 16, 15, 6, 8, 9, 12, 21, 24 };
-int temp;
+//int[] numArr = new int[] { 19, 16, 15, 6, 8, 9, 12, 21, 24 };
+//int temp;
 
-for (int i = 0; i < numArr.Length; i++)
-{
-    for (int j = 0; j < numArr.Length - 1; j++)
-    {
-        if (numArr[j] > numArr[j + 1])
-        {
-            temp = numArr[j + 1];
-            numArr[j + 1] = numArr[j];
-            numArr[j] = temp;
-        }
-    }
-}
-for (int i = 0; i < numArr.Length; i++)
-{
-    Console.WriteLine(numArr[i]);
-}
+//for (int i = 0; i < numArr.Length; i++)
+//{
+//    for (int j = 0; j < numArr.Length - 1; j++)
+//    {
+//        if (numArr[j] > numArr[j + 1])
+//        {
+//            temp = numArr[j + 1];
+//            numArr[j + 1] = numArr[j];
+//            numArr[j] = temp;
+//        }
+//    }
+//}
+//for (int i = 0; i < numArr.Length; i++)
+//{
+//    Console.WriteLine(numArr[i]);
+//}
 #endregion
 
 #region linear Search
@@ -78,6 +78,7 @@ for (int i = 0; i < numArr.Length; i++)
 #endregion
 
 #region Binary Search
+//int[] numArr = new int[] { 3, 4, 5, 7, 8, 9, 10, 11 };
 //int number = 121;
 //int min = 0;
 //int max = numArr.Length - 1;
@@ -100,8 +101,33 @@ for (int i = 0; i < numArr.Length; i++)
 //        max = midPoint - 1;
 //    }
 //}
-Console.WriteLine("verilmis eded tapilmadi");
-#endregion 
+//Console.WriteLine("verilmis eded tapilmadi");
+#endregion
+
+#region Interpolation Search
+int[] numArr = new int[] { 3, 4, 5, 7, 8, 9, 10, 11 };
+int target = 7;
+int max = numArr.Length - 1;
+int min = 0;
+int pos;
+while (min <= max)
+{
+    pos = (min + (max - min) / (numArr[max] - numArr[min]) * (target - numArr[min]));
+    if (numArr[pos] == target)
+    {
+        Console.WriteLine($"Verilmis eded tapildi! {pos} index yerlesir");
+        break;
+    }
+    else if (numArr[pos] > target)
+    {
+        max = pos - 1;
+    }
+    else
+    {
+        min = pos + 1;
+    }
+}
+#endregion
 
 
 
