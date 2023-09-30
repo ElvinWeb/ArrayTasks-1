@@ -105,30 +105,37 @@
 #endregion
 
 #region Interpolation Search
-int[] numArr = new int[] { 3, 4, 5, 7, 8, 9, 10, 11 };
-int target = 7;
-int max = numArr.Length - 1;
-int min = 0;
-int pos;
-while (min <= max)
-{
-    pos = (min + (max - min) / (numArr[max] - numArr[min]) * (target - numArr[min]));
-    if (numArr[pos] == target)
-    {
-        Console.WriteLine($"Verilmis eded tapildi! {pos} index yerlesir");
-        break;
-    }
-    else if (numArr[pos] > target)
-    {
-        max = pos - 1;
-    }
-    else
-    {
-        min = pos + 1;
-    }
-}
-#endregion
+//int[] numArr = { 3, 4, 5, 7, 8, 9, 10, 11, 15, 16, 17, 19, 21 };
+//int target = 5;
+//int max = numArr.Length - 1;
+//int min = 0;
+//int pos;
+//while (min <= max)
+//{
 
+//    pos = (min + (max - min) / (numArr[max] - numArr[min]) * (target - numArr[min]));
+//    if (pos > max && pos > min)
+//    {
+//        Console.WriteLine("Verilmis target deyeri tapilmadi!");
+//        break;
+//    }
+//    else if (numArr[pos] == target)
+//    {
+//        Console.WriteLine($"Verilmis target deyeri tapildi! {pos} indexde yerlesir");
+//        break;
+//    }
+//    else if (numArr[pos] > target)
+//    {
+//        max = pos - 1;
+//    }
+//    else
+//    {
+//        min = pos + 1;
+//    }
+//}
+
+
+#endregion
 
 
 
